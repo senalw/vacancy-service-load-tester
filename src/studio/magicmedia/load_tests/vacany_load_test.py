@@ -5,14 +5,14 @@ from typing import Any, List
 
 import pycountry
 from locust import between, HttpUser, task
-from pb.rpc_signin_user_pb2 import SignInUserResponse
-from pb.vacancy_pb2 import VacancyResponse
 from settings import ROOT_DIR
-from studio.magicmedia.clients import AuthClient, VacancyClient
-from studio.magicmedia.config import Config
-from studio.magicmedia.dto.devision import Division
-from studio.magicmedia.dto.signed_user_dto import SignedUser
-from studio.magicmedia.load_tests.utils import schedule_task
+from src.pb.rpc_signin_user_pb2 import SignInUserResponse
+from src.pb.vacancy_pb2 import VacancyResponse
+from src.studio.magicmedia.clients import AuthClient, VacancyClient
+from src.studio.magicmedia.config import Config
+from src.studio.magicmedia.dto import Division
+from src.studio.magicmedia.dto import SignedUser
+from src.studio.magicmedia.load_tests.utils import schedule_task
 
 
 class VacancyUser(HttpUser):
@@ -79,7 +79,7 @@ class VacancyUser(HttpUser):
             title=self.random_string(),
             description=self.random_string(),
             views=random.randint(1, 1000),  # noqa S311
-            division=random.choice(self.countries),  # noqa S311
+            division=Division.get_random_division(),  # noqa S311
             country=random.choice(self.countries),  # noqa S311
         )
         self.vacancy_client.get_vacancy(vacancy_id)
@@ -87,4 +87,6 @@ class VacancyUser(HttpUser):
 
     @task
     def fetch_all_vacancies(self) -> None:
-        self.client.fetch_all_vacancies()
+        random_page: int = random.randint(1, 10)  # noqa S311
+        random_limit: int = random.randint(1, 100)  # noqa S311
+        self.vacancy_client.get_vacancies(page=random_page, limit=random_limit)

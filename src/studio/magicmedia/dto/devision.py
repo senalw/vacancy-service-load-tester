@@ -9,5 +9,5 @@ class Division(Enum):
     OTHER = "OTHER"
 
     @staticmethod
-    def get_random_division() -> str:
-        return random.choice(list(Division))  # noqa S311
+    def get_random_division() -> int:
+        return random.choice(list(Division)).value  # noqa S311
