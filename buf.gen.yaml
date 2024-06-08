@@ -1,0 +1,14 @@
+version: v1
+managed:
+  enabled: true
+  go_package_prefix:
+    default: https://github.com/senalw/vacancy-service-load-tester
+    except:
+      - buf.build/googleapis/googleapis
+plugins:
+  - plugin: buf.build/grpc/python:v1.56.2
+    out: src
+  - plugin: buf.build/protocolbuffers/python:v23.4
+    out: src
+  - plugin: buf.build/protocolbuffers/pyi:v23.4
+    out: src

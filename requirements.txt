@@ -1,0 +1,2 @@
+google-api-python-client==2.95.0
+grpcio-reflection==1.56.2
