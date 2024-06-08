@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package studio.magicmedia.vacancy.api.v1;
+
+option go_package = "cyrex/vacancies/pb";
+
+import "studio/magicmedia/api/v1/user.proto";
+
+message SignUpUserInput {
+  string name = 1;
+  string email = 2;
+  string password = 3;
+  string passwordConfirm = 4;
+}
+
+message SignUpUserResponse { User user = 1; }
