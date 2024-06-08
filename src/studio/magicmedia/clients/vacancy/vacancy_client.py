@@ -15,7 +15,7 @@ class VacancyClient:
         self.stub = VacancyServiceStub(self.channel)
 
     def create_vacancy(
-        self, title: str, description: str, division: Vacancy.Division, country: str
+        self, title: str, description: str, division: str, country: str
     ) -> VacancyResponse:
         request = CreateVacancyRequest(
             Title=title, Description=description, Division=division, Country=country
@@ -39,7 +39,7 @@ class VacancyClient:
         title: str,
         description: str,
         views: int,
-        division: Vacancy.Division,
+        division: str,
         country: str,
     ) -> VacancyResponse:
         request = UpdateVacancyRequest(
