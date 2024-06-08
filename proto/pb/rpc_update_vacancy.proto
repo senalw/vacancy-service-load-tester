@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package studio.magicmedia.vacancy.api.v1;;
+package pb;
 
 option go_package = "cyrex/vacancies/pb";
-import "studio/magicmedia/api/v1/vacancy.proto";
+import "pb/vacancy.proto";
 
 message UpdateVacancyRequest {
   string Id = 1;

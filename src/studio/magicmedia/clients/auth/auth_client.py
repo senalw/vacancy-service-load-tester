@@ -1,11 +1,11 @@
 import grpc
-from src.studio.magicmedia.api.v1.auth_service_pb2 import VerifyEmailRequest
-from src.studio.magicmedia.api.v1.auth_service_pb2_grpc import AuthServiceStub
-from src.studio.magicmedia.api.v1.rpc_signin_user_pb2 import SignInUserInput
-from src.studio.magicmedia.api.v1.rpc_signin_user_pb2 import SignInUserResponse
-from src.studio.magicmedia.api.v1.rpc_signup_user_pb2 import SignUpUserInput
-from src.studio.magicmedia.api.v1.rpc_signup_user_pb2 import SignUpUserResponse
-from src.studio.magicmedia.api.v1.user_pb2 import GenericResponse
+from src.pb.auth_service_pb2 import VerifyEmailRequest
+from src.pb.auth_service_pb2_grpc import AuthServiceStub
+from src.pb.rpc_signin_user_pb2 import SignInUserInput
+from src.pb.rpc_signin_user_pb2 import SignInUserResponse
+from src.pb.rpc_signup_user_pb2 import SignUpUserInput
+from src.pb.rpc_signup_user_pb2 import SignUpUserResponse
+from src.pb.user_pb2 import GenericResponse
 
 
 class AuthClient:

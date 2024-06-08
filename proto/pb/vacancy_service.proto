@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-package studio.magicmedia.vacancy.api.v1;
+package pb;
 
 option go_package = "cyrex/vacancies/pb";
-import "studio/magicmedia/api/v1/vacancy.proto";
-import "studio/magicmedia/api/v1/rpc_create_vacancy.proto";
-import "studio/magicmedia/api/v1/rpc_update_vacancy.proto";
+import "pb/vacancy.proto";
+import "pb/rpc_create_vacancy.proto";
+import "pb/rpc_update_vacancy.proto";
 
 service VacancyService {
   rpc CreateVacancy(CreateVacancyRequest) returns (VacancyResponse) {}

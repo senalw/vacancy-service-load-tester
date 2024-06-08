@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package studio.magicmedia.vacancy.api.v1;
+package pb;
 
-import "studio/magicmedia/api/v1/rpc_signin_user.proto";
-import "studio/magicmedia/api/v1/rpc_signup_user.proto";
-import "studio/magicmedia/api/v1/user.proto";
+import "pb/rpc_signin_user.proto";
+import "pb/rpc_signup_user.proto";
+import "pb/user.proto";
 
 option go_package = "cyrex/vacancies/pb";
 

@@ -1,12 +1,12 @@
 import grpc
-from studio.magicmedia.api.v1.rpc_create_vacancy_pb2 import CreateVacancyRequest
-from studio.magicmedia.api.v1.rpc_update_vacancy_pb2 import UpdateVacancyRequest
-from studio.magicmedia.api.v1.vacancy_pb2 import Vacancy
-from studio.magicmedia.api.v1.vacancy_pb2 import VacancyResponse
-from studio.magicmedia.api.v1.vacancy_service_pb2 import DeleteVacancyResponse
-from studio.magicmedia.api.v1.vacancy_service_pb2 import GetVacanciesRequest
-from studio.magicmedia.api.v1.vacancy_service_pb2 import VacancyRequest
-from studio.magicmedia.api.v1.vacancy_service_pb2_grpc import VacancyServiceStub
+from src.pb.rpc_create_vacancy_pb2 import CreateVacancyRequest
+from src.pb.rpc_update_vacancy_pb2 import UpdateVacancyRequest
+from src.pb.vacancy_pb2 import Vacancy
+from src.pb.vacancy_pb2 import VacancyResponse
+from src.pb.vacancy_service_pb2 import DeleteVacancyResponse
+from src.pb.vacancy_service_pb2 import GetVacanciesRequest
+from src.pb.vacancy_service_pb2 import VacancyRequest
+from src.pb.vacancy_service_pb2_grpc import VacancyServiceStub
 
 
 class VacancyClient:

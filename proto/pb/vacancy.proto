@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package studio.magicmedia.vacancy.api.v1;
+package pb;
 
 option go_package = "cyrex/vacancies/pb";
 import "google/protobuf/timestamp.proto";

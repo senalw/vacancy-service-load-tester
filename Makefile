@@ -13,7 +13,7 @@ setup: install
 
 .PHONY: clean-proto
 clean-proto:
-	rm -rf src/studio/magicmedia/api/v1/
+	rm -rf src/pb/
 
 
 .PHONY: generate-proto

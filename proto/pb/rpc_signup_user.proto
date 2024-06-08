@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package studio.magicmedia.vacancy.api.v1;
+package pb;
 
 option go_package = "cyrex/vacancies/pb";
 
-import "studio/magicmedia/api/v1/user.proto";
+import "pb/user.proto";
 
 message SignUpUserInput {
   string name = 1;
