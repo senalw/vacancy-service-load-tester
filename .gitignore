@@ -1,0 +1,14 @@
+.idea
+venv
+reports
+*__pycache__*
+.DS_Store
+.run
+flyway*
+
+# Ignore proto output files
+*_pb2*
+.coverage
+*tar.gz
+report.*
+*.env
