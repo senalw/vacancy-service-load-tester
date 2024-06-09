@@ -1,4 +1,6 @@
 google-api-python-client==2.95.0
 grpcio-reflection==1.56.2
+grpc-interceptor==0.15.4
 locust==2.29.0
 pycountry==24.6.1
+python-dotenv==1.0.1
