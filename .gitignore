@@ -11,4 +11,3 @@ flyway*
 .coverage
 *tar.gz
 report.*
-*.env
