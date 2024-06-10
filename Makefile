@@ -15,7 +15,6 @@ setup: install
 clean-proto:
 	rm -rf src/pb/
 
-
 .PHONY: generate-proto
 generate-proto:
 	./tools/go/buf generate
