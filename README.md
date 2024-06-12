@@ -86,7 +86,7 @@ E.g.
 
 ## How to setup project
 1. Run `make setup` command to install required libraries and generate protocol buffer code. 
-2. Run `setup-style` command to set up python linter.
+2. Run `make setup-style` command to set up python linter.
 
 ## How to run load tests
 **1. Use locust Web UI to start and monitor tests interactively.**
