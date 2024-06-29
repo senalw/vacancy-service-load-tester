@@ -31,6 +31,7 @@ class VacancyGrpcUser(GrpcUser):
     stub_classes = [AuthServiceStub, VacancyServiceStub]
     wait_time = constant(30)
     user_index = 0
+    access_token = None
 
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
@@ -63,6 +64,7 @@ class VacancyGrpcUser(GrpcUser):
         )
         if response.status == "success":
             print(f"User {email} logged in successfully")
+            self.access_token = response.access_token
         else:
             raise Exception(f"Failed to log in user {email}: {response.status}")
 
